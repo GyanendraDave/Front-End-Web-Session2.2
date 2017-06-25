@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<title>Assignment-2.2 Contact Form</title>
+
+<!--CSS CODE-->
+<style>
+    body .form-style {
+        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 30px;
+        color: #777;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        border: 3px solid #ddd;
+        padding: 20px;
+    }
+    
+    h1 {
+        background: #e17400;
+        padding: 10px;
+        color: #fff;
+    }
+    
+    li {
+        color: #333;
+        padding: 5px;
+        font-weight: 600;
+    }
+    
+    .container.form-style {
+        margin-top: 20px
+    }
+    
+    .form-style #contact input[type="text"],
+    .form-style #contact input[type="email"],
+    .form-style #contact input[type="tel"],
+    .form-style #contact input[type="url"],
+    .form-style #contact textarea,
+    .form-style #contact button[type="submit"] {
+        font: 400 12px/16px "Open Sans", Helvetica, Arial, sans-serif;
+    }
+    
+    .form-style #contact {
+        background: #F9F9F9;
+        padding: 25px;
+    }
+    
+    .form-style #contact h3 {
+        color: #F96;
+        display: block;
+        font-size: 30px;
+        font-weight: 400;
+    }
+    
+    .form-style #contact h4 {
+        margin: 5px 0 15px;
+        display: block;
+        font-size: 13px;
+    }
+    
+    .form-style fieldset {
+        border: medium none !important;
+        margin: 0 0 10px;
+        min-width: 100%;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .form-style #contact input[type="text"],
+    .form-style #contact input[type="email"],
+    .form-style #contact input[type="tel"],
+    .form-style #contact input[type="url"],
+    .form-style #contact textarea {
+        width: 96%;
+        border: 1px solid #CCC;
+        background: #FFF;
+        margin: 0 0 5px;
+        padding: 10px;
+    }
+    
+    .form-style #contact input[type="text"]:hover,
+    .form-style #contact input[type="email"]:hover,
+    .form-style #contact input[type="tel"]:hover,
+    .form-style #contact input[type="url"]:hover,
+    .form-style #contact textarea:hover {
+        -webkit-transition: border-color 0.3s ease-in-out;
+        -moz-transition: border-color 0.3s ease-in-out;
+        transition: border-color 0.3s ease-in-out;
+        border: 1px solid #AAA;
+    }
+    
+    .form-style #contact textarea {
+        height: 100px;
+        max-width: 100%;
+        resize: none;
+    }
+    
+    .form-style #contact button[type="submit"] {
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        background: #0CF;
+        color: #FFF;
+        margin: 0 0 5px;
+        padding: 10px;
+        font-size: 15px;
+    }
+    
+    .form-style #contact button[type="submit"]:hover {
+        background: #09C;
+        -webkit-transition: background 0.3s ease-in-out;
+        -moz-transition: background 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    .form-style #contact button[type="submit"]:active {
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    .form-style #contact input:focus,
+    .form-style #contact textarea:focus {
+        outline: 0;
+        border: 1px solid #999;
+    }
+    
+     ::-webkit-input-placeholder {
+        color: #888;
+    }
+    
+     :-moz-placeholder {
+        color: #888;
+    }
+    
+     ::-moz-placeholder {
+        color: #888;
+    }
+    
+     :-ms-input-placeholder {
+        color: #888;
+    }
+</style>
+
+
+
+<body>
+    <!--Form defult -->
+    <div class="container">
+        
+        <h1>Contact Us</h1>
+
+        <form action="" method="post">
+            <fieldset>
+
+                <legend>Quick Contact:</legend>
+                
+                <label>Your Name: <input placeholder="Your name" type="text" size="40" maxlength="100" tabindex="1" required autofocus></label><br><br>
+                <label>Email Address: <input placeholder="Your Email Address" type="email" size="40" maxlength="100" tabindex="2" required></label><br><br>
+                <label>Phone Number: <input placeholder="Your Phone Number" type="tel" size="40" maxlength="100" tabindex="3" required></label><br><br>
+                <label>gender: </label><input type="radio" name="gender" value="male" checked> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other<br><br>
+
+                <label>Your Message:</label> <textarea placeholder="Type your Message Here...." size="40" maxlength="100" required></textarea><br><br>
+
+                <button name="submit" type="submit">Submit</button>
+
+            </fieldset>
+        </form>
+    </div>
+
+    <!--Container End -->
+
+    <!--form with CSS-->
+    <div class="container form-style">
+        <form id="contact" action="" method="post">
+           
+            <h3>Quick Contact</h3>
+            <h4>Sub Title Will come here !</h4>
+            <fieldset>
+                <input placeholder="Your name" type="text"  required autofocus>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Email Address" type="email"  required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Phone Number" type="tel"  required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Web Site starts with http://" type="url"  required>
+            </fieldset>
+            <fieldset>
+                <textarea placeholder="Type your Message Here...."  required></textarea>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+            </fieldset>
+            
+        </form>
+
+
+    </div>
+
+</body>
+
+</html>
